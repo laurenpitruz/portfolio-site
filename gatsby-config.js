@@ -6,5 +6,14 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-transformer-sharp`, `gatsby-plugin-sharp`],
+  plugins: [{
+    resolve: `gatsby-plugin-typography`,
+    options: {
+      pathToConfigModule: `src/utils/typography`,
+    },
+  },
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-sharp`,
+  `gatsby-plugin-material-ui`,
+  `gatsby-plugin-emotion`],
 }
