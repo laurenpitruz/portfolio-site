@@ -10,29 +10,24 @@ export default function Home() {
   const classes = useStyles()
   return (
     <div className={classes.container}>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
         <meta charSet="utf-8" />
-        <title>Lauren Pitruzzello</title>
-        <link rel="canonical" href="http://mysite.com/example" />
         <meta name="description" content="Portfolio" />
+        <title>Lauren Pitruzzello</title>
+        <link rel="canonical" href="https://laurenpitruzzello.com/" />
       </Helmet>
-      <h1>Lauren Pitruzzello</h1>
-      <p>Fullstack Software Engineer</p>
-      <p><em>More coming soon...</em></p>
-      <br />
-      <h4>Let's connect</h4>
-      <div className={classes.linksDiv}>
-        <div className={classes.link}>
-          <a alt="link to email Lauren" href="mailto:laurenpitruz@gmail.com"><MailOutlineIcon alt='email Lauren' className={classes.icon} /></a>
-        </div>
-        <div className={classes.link}>
-          <a alt="link to Lauren LinkedIn" href="https://www.linkedin.com/in/laurenpitruzzello"><LinkedInIcon alt='connect on LinkedIn' className={classes.icon} /></a>
-        </div>
-        <div className={classes.link}>
-          <a alt="link to Lauren Instagram" href="https://www.instagram.com/laurenpitruz/"><InstagramIcon alt='connect on Instagram' className={classes.icon} /></a>
-        </div>
-        <div className={classes.link}>
-          <a alt="link to Lauren GitHub" href="https://github.com/laurenpitruz"><GitHubIcon alt='connect on Github' className={classes.icon} /></a>
+      <div className={classes.bioDiv}>
+        <h1>Lauren Pitruzzello</h1>
+        <p>Fullstack Software Engineer</p>
+        <p><em>More coming soon...</em></p>
+      </div>
+      <div>
+        <h4>Let's connect</h4>
+        <div className={classes.linksDiv}>
+          <a alt="link to email Lauren" href="mailto:laurenpitruz@gmail.com" className={classes.link}><MailOutlineIcon alt='email Lauren' className={classes.icon} /></a>
+          <a alt="link to Lauren LinkedIn" href="https://www.linkedin.com/in/laurenpitruzzello" className={classes.link}><LinkedInIcon alt='connect on LinkedIn' className={classes.icon} /></a>
+          <a alt="link to Lauren Instagram" href="https://www.instagram.com/laurenpitruz/" className={classes.link}><InstagramIcon alt='connect on Instagram' className={classes.icon} /></a>
+          <a alt="link to Lauren GitHub" href="https://github.com/laurenpitruz" className={classes.link}><GitHubIcon alt='connect on Github' className={classes.icon} /></a>
         </div>
       </div>
     </div>
@@ -48,6 +43,9 @@ const useStyles = makeStyles({
       paddingRight: '2em'
     },
     textDecoration: 'none'
+  },
+  bioDiv: {
+    paddingBottom: '1em'
   },
   linksDiv: {
     display: 'flex',
