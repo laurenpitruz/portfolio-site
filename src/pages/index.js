@@ -35,6 +35,11 @@ export default function Home() {
 const useStyles = makeStyles({
   container: {
     padding: '6em',
+    '@media (max-width: 420px)': {
+      paddingTop: '4em',
+      paddingLeft: '2em',
+      paddingRight: '2em'
+    },
     textDecoration: 'none'
   },
   linksDiv: {
