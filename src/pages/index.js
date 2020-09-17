@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -9,6 +10,12 @@ export default function Home() {
   const classes = useStyles()
   return (
     <div className={classes.container}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Lauren Pitruzzello</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Portfolio" />
+      </Helmet>
       <h1>Lauren Pitruzzello</h1>
       <p>Fullstack Software Engineer</p>
       <p><em>More coming soon...</em></p>
@@ -16,16 +23,16 @@ export default function Home() {
       <h4>Let's connect</h4>
       <div className={classes.linksDiv}>
         <div className={classes.link}>
-          <a href="mailto:laurenpitruz@gmail.com"><MailOutlineIcon alt='email Lauren' className={classes.icon} /></a>
+          <a alt="link to email Lauren" href="mailto:laurenpitruz@gmail.com"><MailOutlineIcon alt='email Lauren' className={classes.icon} /></a>
         </div>
         <div className={classes.link}>
-          <a href="https://www.linkedin.com/in/laurenpitruzzello"><LinkedInIcon alt='connect on LinkedIn' className={classes.icon} /></a>
+          <a alt="link to Lauren LinkedIn" href="https://www.linkedin.com/in/laurenpitruzzello"><LinkedInIcon alt='connect on LinkedIn' className={classes.icon} /></a>
         </div>
         <div className={classes.link}>
-          <a href="https://www.instagram.com/laurenpitruz/"><InstagramIcon alt='connect on Instagram' className={classes.icon} /></a>
+          <a alt="link to Lauren Instagram" href="https://www.instagram.com/laurenpitruz/"><InstagramIcon alt='connect on Instagram' className={classes.icon} /></a>
         </div>
         <div className={classes.link}>
-          <a href="https://github.com/laurenpitruz"><GitHubIcon alt='connect on Github' className={classes.icon} /></a>
+          <a alt="link to Lauren GitHub" href="https://github.com/laurenpitruz"><GitHubIcon alt='connect on Github' className={classes.icon} /></a>
         </div>
       </div>
     </div>
